@@ -2,5 +2,5 @@
 
 bool Balance::checkBalance(const std::string& s)
 {
-    if(s.empty()) return false;
+    if(s.size()<2) return false;
 }

@@ -28,4 +28,15 @@ SCENARIO("Check balance")
             }
         }
     }
+
+    GIVEN("string (")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be false")
+            {
+                REQUIRE(b.checkBalance("(")==false);
+            }
+        }
+    }
 }
