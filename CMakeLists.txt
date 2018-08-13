@@ -62,3 +62,9 @@ set(TEST_SRC_LIST
 link_libraries(gtest)
 add_executable(${PROJECT_NAME}-ut ${TEST_SRC_LIST})
 target_link_libraries(${PROJECT_NAME}-ut ${PROJECT_NAME}-lib)
+
+set(CATCH_TEST_SRC_LIST
+    test_catch/Balanced.test.cpp
+    test_catch/catch_test_main.cpp)
+
+add_executable(${PROJECT_NAME}-catch-ut ${CATCH_TEST_SRC_LIST})

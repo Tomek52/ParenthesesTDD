@@ -27,3 +27,4 @@ script:
     - make
     - ./Parentheses
     - ./Parentheses-ut
+    - ./Parentheses-catch-ut
