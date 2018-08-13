@@ -25,4 +25,5 @@ script:
     - cd build
     - cmake ..
     - make
-    - ./CombinedNumber-ut
+    - ./Parentheses
+    - ./Parentheses-ut
