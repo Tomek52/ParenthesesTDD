@@ -1,20 +1,6 @@
 #include "catch.hpp"
 #include "../inc/Balanced.hpp"
 
-SCENARIO("test")
-{
-    GIVEN("test")
-    {
-        WHEN("ex:")
-        {
-            THEN("testing")
-            {
-                REQUIRE(true);
-            }
-        }
-    }
-}
-
 SCENARIO("Check balance")
 {
     Balance b;
@@ -29,13 +15,26 @@ SCENARIO("Check balance")
         }
     }
 
-    GIVEN("string (")
+    GIVEN("string with single bracket")
     {
         WHEN("Function is called")
         {
             THEN("Result should be false")
             {
                 REQUIRE(b.checkBalance("(")==false);
+            }
+        }
+    }
+
+    GIVEN("string with odd number of brackets")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be false")
+            {
+                REQUIRE(b.checkBalance("(((")==false);
+                REQUIRE(b.checkBalance("[])")==false);
+                REQUIRE(b.checkBalance("({}})")==false);
             }
         }
     }
