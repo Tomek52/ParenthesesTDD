@@ -40,7 +40,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(CombinedNumber)
 
 set(SRC_LIST
-    src/CombinedNumber.hpp
+    inc/CombinedNumber.hpp
     src/CombinedNumber.cpp
 )
 
@@ -55,8 +55,8 @@ else (UNIX)
 endif (UNIX)
 
 set(TEST_SRC_LIST
-    test/CombinedNumberTests.cpp
-    test/test_main.cpp
+    test_gtest/CombinedNumberTests.cpp
+    test_gtest/test_main.cpp
 )
 
 link_libraries(gtest)

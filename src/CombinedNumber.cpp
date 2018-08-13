@@ -1,2 +1,2 @@
-#include "CombinedNumber.hpp"
+#include "../inc/CombinedNumber.hpp"
 
