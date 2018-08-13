@@ -37,11 +37,11 @@ endif()
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(CombinedNumber)
+project(Parentheses)
 
 set(SRC_LIST
-    inc/CombinedNumber.hpp
-    src/CombinedNumber.cpp
+    inc/Balanced.hpp
+    src/Balanced.cpp
 )
 
 include_directories(src)
@@ -55,7 +55,7 @@ else (UNIX)
 endif (UNIX)
 
 set(TEST_SRC_LIST
-    test_gtest/CombinedNumberTests.cpp
+    test_gtest/BalancedTests.cpp
     test_gtest/test_main.cpp
 )
 

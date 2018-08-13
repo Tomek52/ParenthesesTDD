@@ -1,8 +1,8 @@
 #include <iostream>
-#include "../inc/CombinedNumber.hpp"
+#include "../inc/Balanced.hpp"
 
 int main()
 {
-    std::cout << "CombinedNumber!" << std::endl;
+    std::cout << "balanced" << std::endl;
     return 0;
 }

@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../inc/CombinedNumber.hpp"
+#include "../inc/Balanced.hpp"
 
 struct CombinedNumberTests : public ::testing::Test
 {
