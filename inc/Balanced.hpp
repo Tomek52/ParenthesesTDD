@@ -1,4 +1,8 @@
 #pragma once
+#include <string>
 
-class Balanced 
-{};
+class Balance
+{
+    public:
+    bool checkBalance (const std::string& s);
+};

@@ -14,3 +14,18 @@ SCENARIO("test")
         }
     }
 }
+
+SCENARIO("Check balance")
+{
+    Balance b;
+    GIVEN("empty string")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be false")
+            {
+                REQUIRE(b.checkBalance("")==false);
+            }
+        }
+    }
+}

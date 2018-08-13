@@ -68,3 +68,4 @@ set(CATCH_TEST_SRC_LIST
     test_catch/catch_test_main.cpp)
 
 add_executable(${PROJECT_NAME}-catch-ut ${CATCH_TEST_SRC_LIST})
+target_link_libraries(${PROJECT_NAME}-catch-ut ${PROJECT_NAME}-lib)
