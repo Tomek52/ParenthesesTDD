@@ -38,4 +38,17 @@ SCENARIO("Check balance")
             }
         }
     }
+
+    GIVEN("string with two brackets in correct order")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be true")
+            {
+                REQUIRE(b.checkBalance("()")==true);
+                REQUIRE(b.checkBalance("[]")==true);
+                REQUIRE(b.checkBalance("{}")==true);
+            }
+        }
+    }
 }
