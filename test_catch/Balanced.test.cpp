@@ -65,7 +65,7 @@ SCENARIO("Check balance")
         }
     }
     
-    GIVEN("string with non nested brackets")
+    GIVEN("string with non nested balanced brackets")
     {
         WHEN("Function is called")
         {
@@ -74,6 +74,19 @@ SCENARIO("Check balance")
                 REQUIRE(b.checkBalance("()()")==true);
                 REQUIRE(b.checkBalance("[](){}")==true);
                 REQUIRE(b.checkBalance("{}()[]()(){}{}[]()")==true);
+            }
+        }
+    }
+    
+    GIVEN("string with non nested, non balanced brackets")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be false")
+            {
+                REQUIRE(b.checkBalance("()))")==false);
+                REQUIRE(b.checkBalance("[]({{}")==false);
+                REQUIRE(b.checkBalance("{}())]()(){}{}[]()")==false);
             }
         }
     }
