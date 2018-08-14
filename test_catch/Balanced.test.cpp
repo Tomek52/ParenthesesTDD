@@ -21,7 +21,7 @@ SCENARIO("Check balance")
         {
             THEN("Result should be false")
             {
-                REQUIRE(b.checkBalance("(")==false);
+                REQUIRE(b.checkBalance("[")==false);
             }
         }
     }
@@ -32,9 +32,7 @@ SCENARIO("Check balance")
         {
             THEN("Result should be false")
             {
-                REQUIRE(b.checkBalance("(((")==false);
-                REQUIRE(b.checkBalance("[])")==false);
-                REQUIRE(b.checkBalance("({}})")==false);
+                REQUIRE(b.checkBalance("[]]")==false);
             }
         }
     }
@@ -45,9 +43,7 @@ SCENARIO("Check balance")
         {
             THEN("Result should be true")
             {
-                REQUIRE(b.checkBalance("()")==true);
                 REQUIRE(b.checkBalance("[]")==true);
-                REQUIRE(b.checkBalance("{}")==true);
             }
         }
     }
@@ -58,9 +54,7 @@ SCENARIO("Check balance")
         {
             THEN("Result should be false")
             {
-                REQUIRE(b.checkBalance("(]")==false);
                 REQUIRE(b.checkBalance("[[")==false);
-                REQUIRE(b.checkBalance(")}")==false);
             }
         }
     }
@@ -71,9 +65,7 @@ SCENARIO("Check balance")
         {
             THEN("Result should be true")
             {
-                REQUIRE(b.checkBalance("()()")==true);
-                REQUIRE(b.checkBalance("[](){}")==true);
-                REQUIRE(b.checkBalance("{}()[]()(){}{}[]()")==true);
+                REQUIRE(b.checkBalance("[][][]")==true);
             }
         }
     }
@@ -84,9 +76,18 @@ SCENARIO("Check balance")
         {
             THEN("Result should be false")
             {
-                REQUIRE(b.checkBalance("()))")==false);
-                REQUIRE(b.checkBalance("[]({{}")==false);
-                REQUIRE(b.checkBalance("{}())]()(){}{}[]()")==false);
+                REQUIRE(b.checkBalance("[]][")==false);
+            }
+        }
+    }
+    
+    GIVEN("string with nested balanced brackets")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be true")
+            {
+                REQUIRE(b.checkBalance("[[]]")==true);
             }
         }
     }

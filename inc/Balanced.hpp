@@ -4,5 +4,5 @@
 class Balance
 {
     public:
-    bool checkBalance (const std::string& s);
+    bool checkBalance (std::string s);
 };
