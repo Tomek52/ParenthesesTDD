@@ -113,4 +113,15 @@ SCENARIO("Check balance")
             }
         }
     }
+    
+    GIVEN("string with non nested, balanced parentheses and bracktes")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be true")
+            {
+                REQUIRE(b.checkBalance("[]()()")==true);
+            }
+        }
+    }
 }
