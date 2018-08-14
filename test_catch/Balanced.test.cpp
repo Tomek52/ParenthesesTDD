@@ -91,4 +91,16 @@ SCENARIO("Check balance")
             }
         }
     }
+    
+    GIVEN("string with nested non balanced brackets")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be false")
+            {
+                REQUIRE(b.checkBalance("][[]]]")==false);
+            }
+        }
+    }
+
 }
