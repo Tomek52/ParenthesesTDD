@@ -102,5 +102,15 @@ SCENARIO("Check balance")
             }
         }
     }
-
+    
+    GIVEN("string with pair balanced parentheses")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be true")
+            {
+                REQUIRE(b.checkBalance("()")==true);
+            }
+        }
+    }
 }
