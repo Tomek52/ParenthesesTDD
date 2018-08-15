@@ -163,4 +163,15 @@ SCENARIO("Check balance for given examples")
             }
         }
     }
+    
+    GIVEN("string ({)}")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be false")
+            {
+                REQUIRE(b.checkBalance("({)}")==false);
+            }
+        }
+    }
 }
