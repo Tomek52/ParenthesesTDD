@@ -11,6 +11,7 @@ bool Balance::checkBalance(std::string s)
     {
         if(s.find("()")!=std::string::npos) x=s.find("()");
         else if(s.find("[]")!=std::string::npos) x=s.find("[]");
+        else if(s.find("{}")!=std::string::npos) x=s.find("{}");
         else return false;
         if(x!=std::string::npos)
         {

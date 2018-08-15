@@ -135,4 +135,15 @@ SCENARIO("Check balance")
             }
         }
     }
+    
+    GIVEN("string with (){}[]")
+    {
+        WHEN("Function is called")
+        {
+            THEN("Result should be true")
+            {
+                REQUIRE(b.checkBalance("[]()(){}")==true);
+            }
+        }
+    }
 }
